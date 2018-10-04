@@ -1,0 +1,28 @@
+.footer-main {
+    background: lightgray;
+    background-size: cover;
+    /*@include add-border(5px, $secondary-color,top);*/
+    min-height: 200px;
+    padding: 50px 0;
+    font-size: 16px;
+    /*position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px*/
+}
+
+
+a {
+    color: #ffffff;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    line-height: 1.8em;
+    list-style: none;
+}
+

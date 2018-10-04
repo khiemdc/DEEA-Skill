@@ -1,0 +1,21 @@
+<span class="radioClass">Show by Team: </span>
+
+<input name='options' type='radio' value="All"
+       [(ngModel)]="selectedRadioButtonValue"
+       (change)="onRadioButtonSelectionChange()">
+<span class="radioClass">{{'All(' + all + ')'}}</span>
+
+<input name="options" type="radio" value="Green"
+       [(ngModel)]="selectedRadioButtonValue"
+       (change)="onRadioButtonSelectionChange()">
+<span class="radioClass">{{"Green(" + green + ")"}}</span>
+
+<input name="options" type="radio" value="Blue"
+       [(ngModel)]="selectedRadioButtonValue"
+       (change)="onRadioButtonSelectionChange()">
+<span class="radioClass">{{"Blue(" + blue + ")"}}</span>
+
+<input name="options" type="radio" value="Red"
+       [(ngModel)]="selectedRadioButtonValue"
+       (change)="onRadioButtonSelectionChange()">
+<span class="radioClass">{{"Red(" + red + ")"}}</span>

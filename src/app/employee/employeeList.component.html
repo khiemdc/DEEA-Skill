@@ -1,0 +1,45 @@
+<div class=container>
+<br /> <br />
+    <employee-count [all]="getTotalEmployeesCount()"
+                    [green]="getGreenEmployeesCount()"
+                    [blue]="getBlueEmployeesCount()"
+                    [red]="getRedEmployeesCount()"
+                    (countRadioButtonSelectionChanged)="onEmployeeCountRadioButtonChange($event)">
+    </employee-count>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Team</th>
+            <th>Job Title</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+            <th>Cube#</th>
+            <th>App Build</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <ng-container *ngFor="let employee of employees;">
+            <tr *ngIf="selectedEmployeeCountRadioButton=='All' ||
+                       selectedEmployeeCountRadioButton==employee.team">
+                <td>{{employee.id | uppercase}}</td>
+                <td>{{employee.name }}</td>
+                <td>{{employee.team}}</td>
+                <td>{{employee.title}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.phone}}</td>
+                <td>{{employee.cube}}</td>
+                <td>{{employee.appBuild }}</td>
+                <td>{{employee.company}}</td>
+            </tr>
+        </ng-container>
+        <tr *ngIf="!employees || employees.length==0">
+            <td colspan="5">
+                No employees to display
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

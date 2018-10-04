@@ -1,0 +1,49 @@
+
+<nav id="hero" class="navbar navbar-expand-sm navbar-dark">
+  <!-- <a routerLink="about" class="navbar-brand">DEEA</a> -->
+  <a routerLink="/home" class="navbar-left"><img src="assets/images/deea1.png" class="image-brand" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" (click)="toggle()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      
+  <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngClass]="{show : isActive}">
+   
+    <ul class="navbar-nav mr-auto pl-5">
+      
+          <li class="nav-item">
+            <a routerLink="home" class="nav-link">Weekly Report</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/monthly-report" class="nav-link">Monthly Report</a>
+          </li>
+          <li class="nav-item">
+              <a routerLink="yearly-report" class="nav-link">Yearly Report</a>
+          </li>
+            
+            <!-- <li class="nav-item">
+                <a routerLink="/login" class="nav-link">Login</a>
+              </li> -->
+      </ul>
+      
+      <ul class="navbar-nav ml-auto">
+          <form class="navbar-form navbar-right" role="search">
+              <div >
+                  <input type="text" placeholder="SEARCH"><i class='fa fa-search'></i>
+              </div>
+          </form>
+            <li class="nav-item dropdown nav-login">
+                <a class="nav-link login-link menu-item dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>      
+                <div class=" dropdown dropdown-menu">
+                    <a class="dropdown-item menu-item" href="#">Admin</a>
+                    <a class="dropdown-item menu-item" href="#">User</a>
+                    <!-- <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a> -->
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+                                
+            
